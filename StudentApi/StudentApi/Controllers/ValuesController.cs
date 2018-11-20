@@ -106,7 +106,7 @@ namespace StudentApi.Controllers
                 }
                 else if (e.HResult == -2146232032)
                 {
-                    return "Data incorrect";
+                    return "String Too Long";
                 }
                 return e.InnerException.InnerException.Message;
             }

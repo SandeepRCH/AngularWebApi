@@ -54,9 +54,9 @@ export class StudentComponent implements OnInit {
     }
     public Previous(){
       if(this.index-1>=0){
-        this.message='';
         this.index=this.index-1;
         this.student=this.studs[this.index];
+        this.message='';
       }
       else{
         this.message='Invalid Slection'
@@ -74,11 +74,11 @@ export class StudentComponent implements OnInit {
         this.AddStudent.Address=this.Address;
         this.AddStudent.email=this.email;
         this.AddStudent.branch=this.branch;
-        if(this.AddStudent.Id>0){
+        if(this.Data.ValidateStudent(this.AddStudent)==="Valid" ){
           this.Data.AddStudent(this.AddStudent).subscribe((res)=>this.eMessage=res);
         }
         else{
-          this.eMessage='Invalid Record';
+          this.eMessage=this.Data.ValidateStudent(this.AddStudent);
         }
     }
     public edit(){
@@ -87,6 +87,15 @@ export class StudentComponent implements OnInit {
       this.editstu =JSON.parse(JSON.stringify(this.student));
     }
     public Save(){
-      this.Data.updateStudent(this.editstu.Id,this.editstu).subscribe((res)=>{this.UpdateMessage=res});
+      if(this.Data.ValidateStudent(this.editstu)==="Valid"){
+        this.Data.updateStudent(this.editstu.Id,this.editstu).subscribe((res)=>{this.UpdateMessage=res});
+      }
+      else {
+        this.UpdateMessage=this.Data.ValidateStudent(this.editstu);
+      }
+    }
+    public SelectStu(IdNum:number){
+         this.editstu=this.studs.find(x=>x.Id==IdNum);
+         this.student=this.editstu;
     }
 }

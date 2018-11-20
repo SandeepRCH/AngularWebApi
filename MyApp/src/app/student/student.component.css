@@ -1,7 +1,7 @@
 .studentlist{
     display: block;
     height: auto;
-    width: 5in;
+    width: auto;
 }
 button{
     height: 0.3in;
@@ -42,8 +42,12 @@ h2{
 .getstudent{
     float: left;
     border: 1px solid black;
-    width: 5in;
+    width: auto;
     margin-top: 10px;
     padding: 13px;
     margin-right: 12px;
+}
+.SelectStu:hover{
+color: darkblue;
+cursor: pointer;
 }

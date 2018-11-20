@@ -1,6 +1,6 @@
 <div class="getstudent">
         <button (click)='GetStu()'>Get</button>
-        <div class="studentlist"><div> <table  *ngFor="let stu of studs"><td>{{ stu.Id }}</td>    <td>{{ stu.FullName }} </td>   <td>{{ stu.Address }}</td>     <td>{{ stu.email }}</td> <td>{{ stu.branch }}</td></table> </div> </div>
+        <div class="studentlist"><div> <table><tr *ngFor="let stu of studs"><td class="SelectStu" (click)='SelectStu(stu.Id)'>{{ stu.Id }} </td> <td> {{ stu.FullName }} </td>   <td>{{ stu.Address }}</td>     <td>{{ stu.email }}</td> <td>{{ stu.branch }}</td></tr></table> </div> </div>
         <div><input type="number" [(ngModel)]='IdNum' (keyup.enter)='Find(IdNum)'></div>
         <button (click)='Find(IdNum)'>Find</button>
         <div class="textarea">
