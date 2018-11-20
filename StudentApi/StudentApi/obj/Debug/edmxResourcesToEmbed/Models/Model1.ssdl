@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SandeepDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BackLogInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="subject" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="subject" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="current_status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EducationalInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="YOS" Type="int" />
+    <Property Name="percentage" Type="int" />
+    <Property Name="backlogs" Type="int" />
+    <Property Name="Specialization" Type="varchar" MaxLength="50" />
+    <Property Name="College" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="studentInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="20" />
+    <Property Name="Address" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="varchar" MaxLength="30" />
+    <Property Name="Branch" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK__EducationalI__Id__38996AB5">
+    <End Role="studentInfo" Type="Self.studentInfo" Multiplicity="1" />
+    <End Role="EducationalInfo" Type="Self.EducationalInfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="studentInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EducationalInfo">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BackLogInfo_studentInfo">
+    <End Role="studentInfo" Type="Self.studentInfo" Multiplicity="1" />
+    <End Role="BackLogInfo" Type="Self.BackLogInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="studentInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BackLogInfo">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SandeepDBModelStoreContainer">
+    <EntitySet Name="BackLogInfo" EntityType="Self.BackLogInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EducationalInfo" EntityType="Self.EducationalInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="studentInfo" EntityType="Self.studentInfo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__EducationalI__Id__38996AB5" Association="Self.FK__EducationalI__Id__38996AB5">
+      <End Role="studentInfo" EntitySet="studentInfo" />
+      <End Role="EducationalInfo" EntitySet="EducationalInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BackLogInfo_studentInfo" Association="Self.FK_BackLogInfo_studentInfo">
+      <End Role="studentInfo" EntitySet="studentInfo" />
+      <End Role="BackLogInfo" EntitySet="BackLogInfo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

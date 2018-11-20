@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SandeepDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BackLogInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="subject" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="subject" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="current_status" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EducationalInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="YOS" Type="int" />
+          <Property Name="percentage" Type="int" />
+          <Property Name="backlogs" Type="int" />
+          <Property Name="Specialization" Type="varchar" MaxLength="50" />
+          <Property Name="College" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="studentInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="FullName" Type="varchar" MaxLength="20" />
+          <Property Name="Address" Type="varchar" MaxLength="20" />
+          <Property Name="email" Type="varchar" MaxLength="30" />
+          <Property Name="Branch" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK__EducationalI__Id__38996AB5">
+          <End Role="studentInfo" Type="Self.studentInfo" Multiplicity="1" />
+          <End Role="EducationalInfo" Type="Self.EducationalInfo" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="studentInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EducationalInfo">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BackLogInfo_studentInfo">
+          <End Role="studentInfo" Type="Self.studentInfo" Multiplicity="1" />
+          <End Role="BackLogInfo" Type="Self.BackLogInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="studentInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BackLogInfo">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SandeepDBModelStoreContainer">
+          <EntitySet Name="BackLogInfo" EntityType="Self.BackLogInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EducationalInfo" EntityType="Self.EducationalInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="studentInfo" EntityType="Self.studentInfo" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__EducationalI__Id__38996AB5" Association="Self.FK__EducationalI__Id__38996AB5">
+            <End Role="studentInfo" EntitySet="studentInfo" />
+            <End Role="EducationalInfo" EntitySet="EducationalInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BackLogInfo_studentInfo" Association="Self.FK_BackLogInfo_studentInfo">
+            <End Role="studentInfo" EntitySet="studentInfo" />
+            <End Role="BackLogInfo" EntitySet="BackLogInfo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SandeepDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BackLogInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="subject" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="current_status" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="studentInfo" Relationship="Self.FK_BackLogInfo_studentInfo" FromRole="BackLogInfo" ToRole="studentInfo" />
+        </EntityType>
+        <EntityType Name="EducationalInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="YOS" Type="Int32" />
+          <Property Name="percentage" Type="Int32" />
+          <Property Name="backlogs" Type="Int32" />
+          <Property Name="Specialization" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="College" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="studentInfo" Relationship="Self.FK__EducationalI__Id__38996AB5" FromRole="EducationalInfo" ToRole="studentInfo" />
+        </EntityType>
+        <EntityType Name="studentInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Branch" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BackLogInfo" Relationship="Self.FK_BackLogInfo_studentInfo" FromRole="studentInfo" ToRole="BackLogInfo" />
+          <NavigationProperty Name="EducationalInfo" Relationship="Self.FK__EducationalI__Id__38996AB5" FromRole="studentInfo" ToRole="EducationalInfo" />
+        </EntityType>
+        <Association Name="FK_BackLogInfo_studentInfo">
+          <End Role="studentInfo" Type="Self.studentInfo" Multiplicity="1" />
+          <End Role="BackLogInfo" Type="Self.BackLogInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="studentInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BackLogInfo">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EducationalI__Id__38996AB5">
+          <End Role="studentInfo" Type="Self.studentInfo" Multiplicity="1" />
+          <End Role="EducationalInfo" Type="Self.EducationalInfo" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="studentInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EducationalInfo">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SandeepDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BackLogInfo" EntityType="Self.BackLogInfo" />
+          <EntitySet Name="EducationalInfo" EntityType="Self.EducationalInfo" />
+          <EntitySet Name="studentInfo" EntityType="Self.studentInfo" />
+          <AssociationSet Name="FK_BackLogInfo_studentInfo" Association="Self.FK_BackLogInfo_studentInfo">
+            <End Role="studentInfo" EntitySet="studentInfo" />
+            <End Role="BackLogInfo" EntitySet="BackLogInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EducationalI__Id__38996AB5" Association="Self.FK__EducationalI__Id__38996AB5">
+            <End Role="studentInfo" EntitySet="studentInfo" />
+            <End Role="EducationalInfo" EntitySet="EducationalInfo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SandeepDBModelStoreContainer" CdmEntityContainer="SandeepDBEntities">
+          <EntitySetMapping Name="BackLogInfo">
+            <EntityTypeMapping TypeName="SandeepDBModel.BackLogInfo">
+              <MappingFragment StoreEntitySet="BackLogInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="current_status" ColumnName="current_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EducationalInfo">
+            <EntityTypeMapping TypeName="SandeepDBModel.EducationalInfo">
+              <MappingFragment StoreEntitySet="EducationalInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="YOS" ColumnName="YOS" />
+                <ScalarProperty Name="percentage" ColumnName="percentage" />
+                <ScalarProperty Name="backlogs" ColumnName="backlogs" />
+                <ScalarProperty Name="Specialization" ColumnName="Specialization" />
+                <ScalarProperty Name="College" ColumnName="College" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="studentInfo">
+            <EntityTypeMapping TypeName="SandeepDBModel.studentInfo">
+              <MappingFragment StoreEntitySet="studentInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="Branch" ColumnName="Branch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

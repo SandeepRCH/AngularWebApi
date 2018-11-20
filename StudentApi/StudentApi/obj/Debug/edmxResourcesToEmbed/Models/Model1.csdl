@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SandeepDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BackLogInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="subject" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="current_status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="studentInfo" Relationship="Self.FK_BackLogInfo_studentInfo" FromRole="BackLogInfo" ToRole="studentInfo" />
+  </EntityType>
+  <EntityType Name="EducationalInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="YOS" Type="Int32" />
+    <Property Name="percentage" Type="Int32" />
+    <Property Name="backlogs" Type="Int32" />
+    <Property Name="Specialization" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="College" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="studentInfo" Relationship="Self.FK__EducationalI__Id__38996AB5" FromRole="EducationalInfo" ToRole="studentInfo" />
+  </EntityType>
+  <EntityType Name="studentInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Branch" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BackLogInfo" Relationship="Self.FK_BackLogInfo_studentInfo" FromRole="studentInfo" ToRole="BackLogInfo" />
+    <NavigationProperty Name="EducationalInfo" Relationship="Self.FK__EducationalI__Id__38996AB5" FromRole="studentInfo" ToRole="EducationalInfo" />
+  </EntityType>
+  <Association Name="FK_BackLogInfo_studentInfo">
+    <End Role="studentInfo" Type="Self.studentInfo" Multiplicity="1" />
+    <End Role="BackLogInfo" Type="Self.BackLogInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="studentInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BackLogInfo">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EducationalI__Id__38996AB5">
+    <End Role="studentInfo" Type="Self.studentInfo" Multiplicity="1" />
+    <End Role="EducationalInfo" Type="Self.EducationalInfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="studentInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EducationalInfo">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SandeepDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BackLogInfo" EntityType="Self.BackLogInfo" />
+    <EntitySet Name="EducationalInfo" EntityType="Self.EducationalInfo" />
+    <EntitySet Name="studentInfo" EntityType="Self.studentInfo" />
+    <AssociationSet Name="FK_BackLogInfo_studentInfo" Association="Self.FK_BackLogInfo_studentInfo">
+      <End Role="studentInfo" EntitySet="studentInfo" />
+      <End Role="BackLogInfo" EntitySet="BackLogInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EducationalI__Id__38996AB5" Association="Self.FK__EducationalI__Id__38996AB5">
+      <End Role="studentInfo" EntitySet="studentInfo" />
+      <End Role="EducationalInfo" EntitySet="EducationalInfo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
