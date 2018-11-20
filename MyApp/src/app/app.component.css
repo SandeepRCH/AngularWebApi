@@ -1,0 +1,30 @@
+a{
+	text-decoration: none;
+	padding-left: 0.01in;
+	padding-top: 0.1in;
+	background-color: aqua;
+	height: 0.3in;
+	display: block;
+	float: left;
+	text-align: center;
+	content: normal;
+	margin-left: 0.05in;
+	width: 0.9in;
+	border: 2px solid;
+}
+a:hover{
+	background-color: cornflowerblue;
+	text-decoration: underline;
+}
+nav{
+	
+	display: block;
+	height: 0.3in;
+	float: left;
+}
+.topmargin{
+	margin-top: 0.2in;
+}
+.bottommargin{
+	margin-bottom: 0.3in;
+}

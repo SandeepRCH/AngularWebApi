@@ -1,0 +1,30 @@
+<input type="number" [(ngModel)]='IdNumber' (keyup.enter)='GetEducationInfo(IdNumber)'>
+<br>
+<button (click)='GetEducationInfo(IdNumber)'>Get Deatails</button>
+
+<div *ngFor="let sub of Backlogs">{{   sub.Id  }}   {{   sub.subject }}</div>
+<div *ngIf="dis" class="Display">
+    <div *ngIf="Education">
+<pre>
+ <label >Id :</label>{{ Education.Id }}
+ <label for="">Specialization :</label>{{ Education.Specialization }}
+ <label for="">Backlogs :</label>{{ Education.backlogs }}
+ <label for="">Percentage :</label>{{ Education.percentage }}
+ <label for="">College :</label>{{ Education.College }}
+ <label for="">YOS :</label>{{ Education.YOS }}</pre>
+    </div>
+    <button (click)='toggle()'>Edit</button>
+    <div class="Message"> {{ UpdateMessage }}</div>
+</div>
+<div *ngIf="!dis" class="Edit">
+        <div *ngIf="Education">
+<pre>
+ <label >Id :</label><input type="text" value="{{ Education.Id }}" [(ngModel)]='Education.Id'>
+ <label for="">Specialization :</label><input type="text" value="{{ Education.Specialization }}" [(ngModel)]='Education.Specialization'>
+ <label for="">Backlogs :</label><input type="text" value="{{ Education.backlogs }}" [(ngModel)]='Education.backlogs'>
+ <label for="">Percentage :</label><input type="text" value="{{ Education.percentage }}" [(ngModel)]='Education.percentage'>
+ <label for="">College :</label><input type="text" value="{{ Education.College }}" [(ngModel)]='Education.College'>
+ <label for="">YOS :</label><input type="text" value="{{ Education.YOS }}" [(ngModel)]='Education.YOS'></pre>
+        </div>
+        <button (click)='EditStud()'>Save</button>
+</div>

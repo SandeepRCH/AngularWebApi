@@ -1,0 +1,57 @@
+.chevron::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	width: 0.45em;
+	margin-right: 0.1in;
+	margin-left: 0.1in;
+}
+
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+}
+
+.allign{
+margin-top: 0.2in;
+display: block;
+border-radius: 0.1in;
+background-color: #4CAF50;
+width: 3.9in;
+height: 1in;
+}
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.width-20{
+    widows: 0.5in;;
+}
+.input{
+	margin-top: 5;
+	width: 03.8in;
+}

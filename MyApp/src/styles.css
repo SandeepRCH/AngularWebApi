@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+.close{
+    float: right;
+    background-color: brown;
+    width: 30px;
+    align-content: center;
+    padding-left: 12px;
+}

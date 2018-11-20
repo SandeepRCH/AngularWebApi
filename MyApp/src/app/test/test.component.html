@@ -1,0 +1,17 @@
+<div class="allign">
+    <h2>Select Branch</h2>
+    <select [(ngModel)]="bran">
+      <option *ngFor="let branch of branches">{{branch}}</option>
+    </select>
+    <h1>{{bran}}</h1>
+</div>
+
+<div><input type="number" [(ngModel)]='Message'></div>
+<app-page-not-found [Message]="Message" [ID]="Message"></app-page-not-found>
+ <div><button (click)='play()'>Get players</button></div>
+<div>
+  <div *ngFor="let p of players">{{ p }}</div>
+</div>
+<div><input type="text" [(ngModel)]='ChildMessage'></div>
+<button (click)='AddPlayer(ChildMessage)'>Add Player</button>
+<br>

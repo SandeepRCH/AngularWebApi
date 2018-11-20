@@ -1,0 +1,12 @@
+
+<div class="allign">
+  <span class="chevron left width-20" (click)='decrement()'></span>
+  <span item-width="0.5in">{{ Code }}</span>
+  <span class="chevron right width-20"(click)='increment()'></span>
+  <div class="width-20"></div>
+  <input class="input" type="text" [(ngModel)]="Message">
+  <h1>{{ Message }}</h1>
+</div>
+<div><button (click)='bclick($event)'></button></div>
+<div class="width-20"></div>
+

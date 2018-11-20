@@ -1,0 +1,20 @@
+button{
+    width: 1in;
+    height: 0.24in;
+    margin-top: 0.1in;
+}
+label{
+    width: 1.5in;
+    display: inline-block;
+    margin-top: 3px;
+    height: 20px;
+}
+.Display{
+margin: 0px;
+}
+.Edit{
+margin: 0px;
+}
+.Message{
+    color: green;
+}

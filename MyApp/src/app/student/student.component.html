@@ -1,0 +1,42 @@
+<div class="getstudent">
+        <button (click)='GetStu()'>Get</button>
+        <div class="studentlist"><div> <table  *ngFor="let stu of studs"><td>{{ stu.Id }}</td>    <td>{{ stu.FullName }} </td>   <td>{{ stu.Address }}</td>     <td>{{ stu.email }}</td> <td>{{ stu.branch }}</td></table> </div> </div>
+        <div><input type="number" [(ngModel)]='IdNum' (keyup.enter)='Find(IdNum)'></div>
+        <button (click)='Find(IdNum)'>Find</button>
+        <div class="textarea">
+                <textarea *ngIf="student" name="Student Details" cols="30" rows="10"> {{ student.Id }} &#13;&#10; {{ student.FullName }} &#13;&#10; {{ student.Address}} &#13;&#10; {{ student.email}} &#13;&#10; {{ student.branch}}</textarea>
+        </div>
+        <div class="error">{{ message }}</div>
+        <br>
+        <button (click)='Previous()'>Previous</button>
+        <button (click)='Next()'>Next</button>
+        <button (click)='edit()'>Edit</button>
+</div>
+
+
+
+<div class="addstudent">
+    <h2>Add Student</h2>
+    <div> <label>ID :</label><input type="number"  [(ngModel)]='Id'> </div>
+    <div> <label>Name :</label><input type="text"  [(ngModel)]='Name' > </div>
+    <div> <label>Address :</label><input type="text"  [(ngModel)]='Address'> </div>
+    <div> <label>Email :</label><input type="text"  [(ngModel)]='email'> </div>
+    <div> <label>Branch :</label><input type="text"  [(ngModel)]='branch' > </div>
+    <button (click)='addstudent()'>Add Student</button> 
+    <div>{{ eMessage }}</div>
+ 
+    <div *ngIf="editstu" >
+            <h2>Edit Student</h2>
+            <div> <label>ID :</label><label>{{ editstu.Id  }}</label></div>
+            <div> <label>Name :</label><input type="text" value="{{ editstu.FullName }}" [(ngModel)]='editstu.FullName'> </div>
+            <div> <label>Address :</label><input type="text" value="{{ editstu.Address }}" [(ngModel)]='editstu.Address'> </div>
+            <div> <label>Email :</label><input type="text" value="{{ editstu.email }}" [(ngModel)]=' editstu.email'> </div>
+            <div> <label>Branch :</label><input type="text" value="{{ editstu.branch }}" [(ngModel)]='editstu.branch'> </div>
+            <button (click)='Save()'>Save</button> 
+            <div>{{ UpdateMessage }}</div>
+    </div>
+
+</div>
+
+
+

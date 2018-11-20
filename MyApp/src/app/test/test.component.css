@@ -1,0 +1,26 @@
+.allign{
+    background-color: cadetblue;
+    -ms-flex-align: center;
+    width: 4in;
+    height: 1in;
+    display: block;
+    border-radius: 5px;
+}
+option{
+    display: inline;
+}
+h1{
+    display: inline;
+}
+h2{
+    display: block;
+}
+button{
+    height: 0.3in;
+    width: 1in;
+    background-color: aliceblue;
+    margin-top: 0.1in;
+}
+input{
+    margin-top: 0.1in;
+}
