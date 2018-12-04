@@ -1,0 +1,6 @@
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\EqualsTesting\EqualsTesting\bin\Debug\EqualsTesting.exe.config
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\EqualsTesting\EqualsTesting\bin\Debug\EqualsTesting.exe
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\EqualsTesting\EqualsTesting\bin\Debug\EqualsTesting.pdb
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\EqualsTesting\EqualsTesting\obj\Debug\EqualsTesting.csprojResolveAssemblyReference.cache
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\EqualsTesting\EqualsTesting\obj\Debug\EqualsTesting.exe
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\EqualsTesting\EqualsTesting\obj\Debug\EqualsTesting.pdb

@@ -1,0 +1,24 @@
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\BuissinessLayers\bin\Debug\BuissinessLayers.dll
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\BuissinessLayers\bin\Debug\BuissinessLayers.pdb
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\BuissinessLayers\bin\Debug\DataLayer.dll
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\BuissinessLayers\bin\Debug\DomainLayer.dll
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\BuissinessLayers\bin\Debug\DataLayer.pdb
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\BuissinessLayers\bin\Debug\DomainLayer.pdb
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\BuissinessLayers\obj\Debug\BuissinessLayers.csprojResolveAssemblyReference.cache
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\BuissinessLayers\obj\Debug\BuissinessLayers.dll
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\BuissinessLayers\obj\Debug\BuissinessLayers.pdb
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\AutoMapperTesting\BuissinessLayers\bin\Debug\Repo.dll
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\AutoMapperTesting\BuissinessLayers\bin\Debug\Repo.pdb
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\bin\Debug\BuissinessLayers.dll
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\bin\Debug\BuissinessLayers.pdb
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\bin\Debug\DataLayer.dll
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\bin\Debug\DomainLayer.dll
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\bin\Debug\Repo.dll
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\bin\Debug\DataLayer.pdb
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\bin\Debug\DomainLayer.pdb
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\bin\Debug\Repo.pdb
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\obj\Debug\BuissinessLayers.csprojAssemblyReference.cache
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\obj\Debug\BuissinessLayers.csproj.CoreCompileInputs.cache
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\obj\Debug\BuissinessLayers.csproj.CopyComplete
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\obj\Debug\BuissinessLayers.dll
+D:\1.PROJECTS\AutoMapperTesting\BuissinessLayers\obj\Debug\BuissinessLayers.pdb

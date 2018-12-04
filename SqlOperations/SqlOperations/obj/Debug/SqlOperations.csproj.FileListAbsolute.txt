@@ -1,0 +1,16 @@
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\SqlOperations\SqlOperations\bin\Debug\SqlOperations.exe.config
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\SqlOperations\SqlOperations\bin\Debug\SqlOperations.exe
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\SqlOperations\SqlOperations\bin\Debug\SqlOperations.pdb
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\SqlOperations\SqlOperations\obj\Debug\SqlOperations.csprojResolveAssemblyReference.cache
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\SqlOperations\SqlOperations\obj\Debug\SqlOperations.exe
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\SqlOperations\SqlOperations\obj\Debug\SqlOperations.pdb
+C:\Users\sandeep.chaganti\sandeep.chaganti\dev\SqlOperations\SqlOperations\bin\Debug\SqlOperations.exe.config
+C:\Users\sandeep.chaganti\sandeep.chaganti\dev\SqlOperations\SqlOperations\obj\Debug\SqlOperations.exe
+C:\Users\sandeep.chaganti\sandeep.chaganti\dev\SqlOperations\SqlOperations\obj\Debug\SqlOperations.pdb
+D:\1.PROJECTS\SqlOperations\SqlOperations\bin\Debug\SqlOperations.exe.config
+D:\1.PROJECTS\SqlOperations\SqlOperations\bin\Debug\SqlOperations.exe
+D:\1.PROJECTS\SqlOperations\SqlOperations\bin\Debug\SqlOperations.pdb
+D:\1.PROJECTS\SqlOperations\SqlOperations\obj\Debug\SqlOperations.csprojAssemblyReference.cache
+D:\1.PROJECTS\SqlOperations\SqlOperations\obj\Debug\SqlOperations.csproj.CoreCompileInputs.cache
+D:\1.PROJECTS\SqlOperations\SqlOperations\obj\Debug\SqlOperations.exe
+D:\1.PROJECTS\SqlOperations\SqlOperations\obj\Debug\SqlOperations.pdb

@@ -1,0 +1,9 @@
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\IsTesting\IsTesting\bin\Debug\IsTesting.exe.config
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\IsTesting\IsTesting\bin\Debug\IsTesting.exe
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\IsTesting\IsTesting\bin\Debug\IsTesting.pdb
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\IsTesting\IsTesting\obj\Debug\IsTesting.csprojResolveAssemblyReference.cache
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\IsTesting\IsTesting\obj\Debug\IsTesting.exe
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\IsTesting\IsTesting\obj\Debug\IsTesting.pdb
+C:\Users\sandeep.chaganti\sandeep.chaganti\dev\IsTesting\IsTesting\bin\Debug\IsTesting.exe.config
+C:\Users\sandeep.chaganti\sandeep.chaganti\dev\IsTesting\IsTesting\obj\Debug\IsTesting.exe
+C:\Users\sandeep.chaganti\sandeep.chaganti\dev\IsTesting\IsTesting\obj\Debug\IsTesting.pdb

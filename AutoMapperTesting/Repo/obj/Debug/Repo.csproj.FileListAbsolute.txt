@@ -1,0 +1,11 @@
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\AutoMapperTesting\Repo\obj\Debug\Repo.csprojResolveAssemblyReference.cache
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\AutoMapperTesting\Repo\bin\Debug\Repo.dll
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\AutoMapperTesting\Repo\bin\Debug\Repo.pdb
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\AutoMapperTesting\Repo\obj\Debug\Repo.dll
+C:\Users\sandeep.chaganti\Documents\Visual Studio 2015\Projects\AutoMapperTesting\Repo\obj\Debug\Repo.pdb
+D:\1.PROJECTS\AutoMapperTesting\Repo\bin\Debug\Repo.dll
+D:\1.PROJECTS\AutoMapperTesting\Repo\bin\Debug\Repo.pdb
+D:\1.PROJECTS\AutoMapperTesting\Repo\obj\Debug\Repo.csprojAssemblyReference.cache
+D:\1.PROJECTS\AutoMapperTesting\Repo\obj\Debug\Repo.csproj.CoreCompileInputs.cache
+D:\1.PROJECTS\AutoMapperTesting\Repo\obj\Debug\Repo.dll
+D:\1.PROJECTS\AutoMapperTesting\Repo\obj\Debug\Repo.pdb

@@ -1,0 +1,92 @@
+<div class="navbar flex-container flex-center">
+        <div class="dropdown">
+       <button class="dropbtn">Change Theme
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-content">
+         <div class="flex-container flex-center"><button class="button" (click)="DarkTheme()">Dark Theme</button></div>
+         <div class="flex-container flex-center"><button class="button" (click)="LightTheme()">light Theme</button></div>
+       </div>
+     </div> 
+     <div class="dropdown">
+        <button class="dropbtn">BackGround
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <div class="flex-container flex-center"><button class="button" (click)="Dark()">Dark Theme</button></div>
+          <div class="flex-container flex-center"><button class="button" (click)="Light()">light Theme</button></div>
+        </div>
+      </div>
+   </div>
+   <div class="{{background}}">
+ <div class="flex-container flex-center" >
+ <div class="flex-container flex-center">
+   <div id="calendar-container" class="flex-container flex-column flex-center">
+       <div class="flex-Container flex-center">
+         <div>
+             <div>
+                 <form [formGroup]='dateForm' class='flex-container flex-center'>
+                 <input type="text" placeholder='From Date' name='dateFrom' formControlName='dateFrom'  [(ngModel)]="StartDate" >
+                 <input type="text" placeholder='To Date' name='dateTo' formControlName='dateTo' [(ngModel)]="EndDate">
+                 <button class="button" (click)="Apply()">Apply</button>
+                 </form>
+         </div>
+         </div>
+         <div class="height-20px"></div>
+       </div>
+       <div class="flex-container flex-center-horz"></div>
+     <div class="flex-container flex-center-horz">
+       <div class="fa fa-chevron-left"(click)='previousMonth()'></div>
+       <div class="width-50"></div>
+       <div>{{date.format('MMMM')}} {{date.format('YYYY')}}</div>
+       <div class="width-50"></div>
+       <div>{{predate.format('MMMM')}} {{predate.format('YYYY')}}</div>
+       <div class="width-50"></div>
+       <div class="fa fa-chevron-right"(click)='nextMonth()'></div>
+     </div>
+     <div class="height-20px"></div>
+     <div class="flex-container flex-center">
+        <div>
+            <div class="flex-container flex-center">
+                <div class="{{Theme}}">Sun</div>
+                <div class="{{Theme}}">Mon</div>
+                <div class="{{Theme}}">Tue</div>
+                <div class="{{Theme}}">Wed</div>
+                <div class="{{Theme}}">Thu</div>
+                <div class="{{Theme}}">Fri</div>
+                <div class="{{Theme}}">Sat</div>
+            </div>
+            <div class="height-20px"></div>
+          <div class="flex-container flex-wrap">
+          <div *ngFor='let day of daysArr'>
+          <div class="calendar-days flex-container flex-center" (click)='selectedDate(day)' [ngClass]="{'inactive':!day,'today':todayCheck(day),'selected':isSelected(day)}">{{ day?.date() }}</div>
+          </div>
+            </div>
+          </div>
+            <div class="height-20px"></div>
+            <div>
+                <div class="flex-container flex-center">
+                   
+                <div class="{{Theme}}">Sun</div>
+                <div class="{{Theme}}">Mon</div>
+                <div class="{{Theme}}">Tue</div>
+                <div class="{{Theme}}">Wed</div>
+                <div class="{{Theme}}">Thu</div>
+                <div class="{{Theme}}">Fri</div>
+                <div class="{{Theme}}">Sat</div>
+                </div>
+                <div class="height-20px"></div>
+                  <div class="flex-container flex-wrap">
+                      <div *ngFor='let day of predaysArr'>
+                        <div class="calendar-days flex-container flex-center" (click)='selectedDate(day)' [ngClass]="{'inactive':!day,'today':todayCheck(day),'selected':isSelected(day)}">{{ day?.date() }}</div>
+                      </div>
+                  </div>
+          </div>
+        </div>
+       </div>
+     </div>
+ </div>
+ </div>
+ <div class="flex-container flex-center">
+   <p>{{ Message }}</p>
+ </div>

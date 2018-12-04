@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SandeepDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblAlert">
+    <Key>
+      <PropertyRef Name="tblAlertId" />
+    </Key>
+    <Property Name="tblAlertId" Type="int" Nullable="false" />
+    <Property Name="Subject" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoan">
+    <Key>
+      <PropertyRef Name="tblLoanId" />
+    </Key>
+    <Property Name="tblLoanId" Type="int" Nullable="false" />
+    <Property Name="ActualLoanId" Type="int" Nullable="false" />
+    <Property Name="PrimaryBorrowerId" Type="int" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedAt" Type="datetime" Nullable="false" />
+    <Property Name="tblLoanStatusId" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoanStatus">
+    <Key>
+      <PropertyRef Name="tblLoanStatusId" />
+    </Key>
+    <Property Name="tblLoanStatusId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Lable" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblRole">
+    <Key>
+      <PropertyRef Name="tblRoleId" />
+    </Key>
+    <Property Name="tblRoleId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSetting">
+    <Key>
+      <PropertyRef Name="tblSettingId" />
+    </Key>
+    <Property Name="tblSettingId" Type="int" Nullable="false" />
+    <Property Name="tblUserId" Type="int" Nullable="false" />
+    <Property Name="IsAllSettingsEnabled" Type="bit" Nullable="false" />
+    <Property Name="IsPushNotificationsEnabled" Type="bit" Nullable="false" />
+    <Property Name="IsAlertsEnabled" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="tblUserId" />
+    </Key>
+    <Property Name="tblUserId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="roleId" Type="int" />
+  </EntityType>
+  <EntityType Name="tblUserAlert">
+    <Key>
+      <PropertyRef Name="tblUserId" />
+      <PropertyRef Name="tblAlertId" />
+    </Key>
+    <Property Name="tblUserId" Type="int" Nullable="false" />
+    <Property Name="tblAlertId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="IsRead" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUserLoan">
+    <Key>
+      <PropertyRef Name="tblLoanId" />
+      <PropertyRef Name="tblUserId" />
+    </Key>
+    <Property Name="tblLoanId" Type="int" Nullable="false" />
+    <Property Name="tblUserId" Type="int" Nullable="false" />
+    <Property Name="tblRoleId" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tblLoan_tblLoanStatus">
+    <End Role="tblLoanStatus" Type="Self.tblLoanStatus" Multiplicity="1" />
+    <End Role="tblLoan" Type="Self.tblLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblLoanStatus">
+        <PropertyRef Name="tblLoanStatusId" />
+      </Principal>
+      <Dependent Role="tblLoan">
+        <PropertyRef Name="tblLoanStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblLoan_tblUser">
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="1" />
+    <End Role="tblLoan" Type="Self.tblLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="tblUserId" />
+      </Principal>
+      <Dependent Role="tblLoan">
+        <PropertyRef Name="PrimaryBorrowerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSetting_tblUser">
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="1" />
+    <End Role="tblSetting" Type="Self.tblSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="tblUserId" />
+      </Principal>
+      <Dependent Role="tblSetting">
+        <PropertyRef Name="tblUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserAlert_tblAlert">
+    <End Role="tblAlert" Type="Self.tblAlert" Multiplicity="1" />
+    <End Role="tblUserAlert" Type="Self.tblUserAlert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAlert">
+        <PropertyRef Name="tblAlertId" />
+      </Principal>
+      <Dependent Role="tblUserAlert">
+        <PropertyRef Name="tblAlertId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserAlert_tblUser">
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="1" />
+    <End Role="tblUserAlert" Type="Self.tblUserAlert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="tblUserId" />
+      </Principal>
+      <Dependent Role="tblUserAlert">
+        <PropertyRef Name="tblUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserLoan_tblLoan">
+    <End Role="tblLoan" Type="Self.tblLoan" Multiplicity="1" />
+    <End Role="tblUserLoan" Type="Self.tblUserLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblLoan">
+        <PropertyRef Name="tblLoanId" />
+      </Principal>
+      <Dependent Role="tblUserLoan">
+        <PropertyRef Name="tblLoanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserLoan_tblRole">
+    <End Role="tblRole" Type="Self.tblRole" Multiplicity="1" />
+    <End Role="tblUserLoan" Type="Self.tblUserLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRole">
+        <PropertyRef Name="tblRoleId" />
+      </Principal>
+      <Dependent Role="tblUserLoan">
+        <PropertyRef Name="tblRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserLoan_tblUser">
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="1" />
+    <End Role="tblUserLoan" Type="Self.tblUserLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="tblUserId" />
+      </Principal>
+      <Dependent Role="tblUserLoan">
+        <PropertyRef Name="tblUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SandeepDBModelStoreContainer">
+    <EntitySet Name="tblAlert" EntityType="Self.tblAlert" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoan" EntityType="Self.tblLoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanStatus" EntityType="Self.tblLoanStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRole" EntityType="Self.tblRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSetting" EntityType="Self.tblSetting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserAlert" EntityType="Self.tblUserAlert" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserLoan" EntityType="Self.tblUserLoan" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tblLoan_tblLoanStatus" Association="Self.FK_tblLoan_tblLoanStatus">
+      <End Role="tblLoanStatus" EntitySet="tblLoanStatus" />
+      <End Role="tblLoan" EntitySet="tblLoan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblLoan_tblUser" Association="Self.FK_tblLoan_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblLoan" EntitySet="tblLoan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSetting_tblUser" Association="Self.FK_tblSetting_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblSetting" EntitySet="tblSetting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserAlert_tblAlert" Association="Self.FK_tblUserAlert_tblAlert">
+      <End Role="tblAlert" EntitySet="tblAlert" />
+      <End Role="tblUserAlert" EntitySet="tblUserAlert" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserAlert_tblUser" Association="Self.FK_tblUserAlert_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblUserAlert" EntitySet="tblUserAlert" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserLoan_tblLoan" Association="Self.FK_tblUserLoan_tblLoan">
+      <End Role="tblLoan" EntitySet="tblLoan" />
+      <End Role="tblUserLoan" EntitySet="tblUserLoan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserLoan_tblRole" Association="Self.FK_tblUserLoan_tblRole">
+      <End Role="tblRole" EntitySet="tblRole" />
+      <End Role="tblUserLoan" EntitySet="tblUserLoan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserLoan_tblUser" Association="Self.FK_tblUserLoan_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblUserLoan" EntitySet="tblUserLoan" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

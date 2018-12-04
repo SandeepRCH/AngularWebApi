@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SandeepDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Courses">
+    <Key>
+      <PropertyRef Name="CourseId" />
+    </Key>
+    <Property Name="CourseId" Type="int" Nullable="false" />
+    <Property Name="CourceName" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="EmpCourses">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+      <PropertyRef Name="courseId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="courseId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="Name" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Salary" Type="int" />
+    <Property Name="City" Type="nchar" MaxLength="10" />
+    <Property Name="Experience" Type="int" />
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__EmpCourse__cours__4AB81AF0">
+    <End Role="Courses" Type="Self.Courses" Multiplicity="1" />
+    <End Role="EmpCourses" Type="Self.EmpCourses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="CourseId" />
+      </Principal>
+      <Dependent Role="EmpCourses">
+        <PropertyRef Name="courseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EmpCourse__Emplo__49C3F6B7">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="EmpCourses" Type="Self.EmpCourses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="EmpCourses">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SandeepDBModelStoreContainer">
+    <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpCourses" EntityType="Self.EmpCourses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__EmpCourse__cours__4AB81AF0" Association="Self.FK__EmpCourse__cours__4AB81AF0">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="EmpCourses" EntitySet="EmpCourses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EmpCourse__Emplo__49C3F6B7" Association="Self.FK__EmpCourse__Emplo__49C3F6B7">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="EmpCourses" EntitySet="EmpCourses" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

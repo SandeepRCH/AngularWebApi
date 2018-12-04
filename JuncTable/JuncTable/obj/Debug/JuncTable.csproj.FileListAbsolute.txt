@@ -1,0 +1,13 @@
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\JuncTable\JuncTable\bin\Debug\JuncTable.exe.config
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\JuncTable\JuncTable\bin\Debug\JuncTable.exe
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\JuncTable\JuncTable\bin\Debug\JuncTable.pdb
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\JuncTable\JuncTable\bin\Debug\EntityFramework.dll
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\JuncTable\JuncTable\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\JuncTable\JuncTable\bin\Debug\EntityFramework.xml
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\JuncTable\JuncTable\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\JuncTable\JuncTable\obj\Debug\JuncTable.csprojResolveAssemblyReference.cache
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\JuncTable\JuncTable\obj\Debug\JuncTable.exe
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\JuncTable\JuncTable\obj\Debug\JuncTable.pdb
+C:\Users\sandeep.chaganti\sandeep.chaganti\dev\JuncTable\JuncTable\bin\Debug\JuncTable.exe.config
+C:\Users\sandeep.chaganti\sandeep.chaganti\dev\JuncTable\JuncTable\obj\Debug\JuncTable.exe
+C:\Users\sandeep.chaganti\sandeep.chaganti\dev\JuncTable\JuncTable\obj\Debug\JuncTable.pdb

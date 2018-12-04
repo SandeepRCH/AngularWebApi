@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SandeepDBModelStoreContainer" CdmEntityContainer="SandeepDBEntities2">
+    <EntitySetMapping Name="tblAlert">
+      <EntityTypeMapping TypeName="SandeepDBModel.tblAlert">
+        <MappingFragment StoreEntitySet="tblAlert">
+          <ScalarProperty Name="tblAlertId" ColumnName="tblAlertId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLoan">
+      <EntityTypeMapping TypeName="SandeepDBModel.tblLoan">
+        <MappingFragment StoreEntitySet="tblLoan">
+          <ScalarProperty Name="tblLoanId" ColumnName="tblLoanId" />
+          <ScalarProperty Name="ActualLoanId" ColumnName="ActualLoanId" />
+          <ScalarProperty Name="PrimaryBorrowerId" ColumnName="PrimaryBorrowerId" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="ModifiedAt" ColumnName="ModifiedAt" />
+          <ScalarProperty Name="tblLoanStatusId" ColumnName="tblLoanStatusId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLoanStatus">
+      <EntityTypeMapping TypeName="SandeepDBModel.tblLoanStatus">
+        <MappingFragment StoreEntitySet="tblLoanStatus">
+          <ScalarProperty Name="tblLoanStatusId" ColumnName="tblLoanStatusId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Lable" ColumnName="Lable" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRole">
+      <EntityTypeMapping TypeName="SandeepDBModel.tblRole">
+        <MappingFragment StoreEntitySet="tblRole">
+          <ScalarProperty Name="tblRoleId" ColumnName="tblRoleId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSetting">
+      <EntityTypeMapping TypeName="SandeepDBModel.tblSetting">
+        <MappingFragment StoreEntitySet="tblSetting">
+          <ScalarProperty Name="tblSettingId" ColumnName="tblSettingId" />
+          <ScalarProperty Name="tblUserId" ColumnName="tblUserId" />
+          <ScalarProperty Name="IsAllSettingsEnabled" ColumnName="IsAllSettingsEnabled" />
+          <ScalarProperty Name="IsPushNotificationsEnabled" ColumnName="IsPushNotificationsEnabled" />
+          <ScalarProperty Name="IsAlertsEnabled" ColumnName="IsAlertsEnabled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUser">
+      <EntityTypeMapping TypeName="SandeepDBModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="tblUserId" ColumnName="tblUserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserAlert">
+      <EntityTypeMapping TypeName="SandeepDBModel.tblUserAlert">
+        <MappingFragment StoreEntitySet="tblUserAlert">
+          <ScalarProperty Name="tblUserId" ColumnName="tblUserId" />
+          <ScalarProperty Name="tblAlertId" ColumnName="tblAlertId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserLoan">
+      <EntityTypeMapping TypeName="SandeepDBModel.tblUserLoan">
+        <MappingFragment StoreEntitySet="tblUserLoan">
+          <ScalarProperty Name="tblLoanId" ColumnName="tblLoanId" />
+          <ScalarProperty Name="tblUserId" ColumnName="tblUserId" />
+          <ScalarProperty Name="tblRoleId" ColumnName="tblRoleId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

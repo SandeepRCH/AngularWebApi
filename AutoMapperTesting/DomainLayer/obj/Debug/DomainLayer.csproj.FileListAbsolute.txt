@@ -1,0 +1,11 @@
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\DomainLayer\bin\Debug\DomainLayer.dll
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\DomainLayer\bin\Debug\DomainLayer.pdb
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\DomainLayer\obj\Debug\DomainLayer.dll
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\DomainLayer\obj\Debug\DomainLayer.pdb
+c:\users\sandeep.chaganti\documents\visual studio 2015\Projects\AutoMapperTesting\DomainLayer\obj\Debug\DomainLayer.csprojResolveAssemblyReference.cache
+D:\1.PROJECTS\AutoMapperTesting\DomainLayer\bin\Debug\DomainLayer.dll
+D:\1.PROJECTS\AutoMapperTesting\DomainLayer\bin\Debug\DomainLayer.pdb
+D:\1.PROJECTS\AutoMapperTesting\DomainLayer\obj\Debug\DomainLayer.csprojAssemblyReference.cache
+D:\1.PROJECTS\AutoMapperTesting\DomainLayer\obj\Debug\DomainLayer.csproj.CoreCompileInputs.cache
+D:\1.PROJECTS\AutoMapperTesting\DomainLayer\obj\Debug\DomainLayer.dll
+D:\1.PROJECTS\AutoMapperTesting\DomainLayer\obj\Debug\DomainLayer.pdb
