@@ -1,0 +1,27 @@
+.blockright{
+	   border-radius: 0.1in;
+	   background-color: #4CAF50;
+	   width: 4in;
+	   height: 1.499in;
+	   margin-left: 4.2in;
+	   padding-top: 0.001in;
+	   padding: 0.001in;
+	   padding-left: 0.01in;
+   }
+   .blockleft{
+	   float:left;
+	   border-radius: 0.1in;
+	   background-color: cadetblue;
+	   width: 4in;
+	   height: 1.5in;
+	   padding-left: 0.01in;
+   }
+   .block{
+	   margin-top: 4in;
+   }
+   img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 13%;
+   }

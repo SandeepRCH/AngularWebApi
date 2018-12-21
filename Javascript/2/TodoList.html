@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Todo </title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body class="Form">
+<h1>Todo</h1>
+<hr>
+<pre>Pending tasks: <label id="PendingTasks">0</label>        Completed tasks :  <label id="CompletedTasks">0</label>    Progress : <label id="Progress">0</label></pre>
+<hr>
+<div class="FormData">
+<label>Task Name : </label><input type="text" id="task"><br>
+<label>Status : </label><select name="Status" id="status">
+                         <option value="Pending">Pending</option> 
+                         <option value="Completed">Completed</option> 
+                        </select><br>
+<label>Tags : </label><input type="text" id="tags"><button onclick="AddTags()">Add Tag</button><br>
+<button type="submit" id="submit">save</button>
+<a onclick="RemoveCompleted()" href="#">Remove Completed</a>
+</div>
+<div class="search">
+    <input type="text" id="SearchText"><button onclick="search()">search</button><button onclick="updatetable()">cancel</button>
+</div>
+<div id="TaskTable"></div>
+<script src="ToDoListScript.js">
+</script>
+</body>
+</html>

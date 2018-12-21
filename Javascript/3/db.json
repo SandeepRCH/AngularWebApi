@@ -1,0 +1,45 @@
+{
+  "tasks": [
+
+    {
+      "id": "1",
+      "name": "task1",
+      "tags": [
+        "work"
+      ],
+      "isCompleted": false
+    },
+    {
+      "id": 2,
+      "name": "task2",
+      "tags": [
+        "game"
+      ],
+      "isCompleted": true
+    },
+    {
+      "id": 3,
+      "name": "task3",
+      "tags": [
+        "Study"
+      ],
+      "isCompleted": true
+    },
+    {
+      "id": 4,
+      "name": "task4",
+      "tags": [
+        "work"
+      ],
+      "isCompleted": false
+    },
+    {
+      "id": 5,
+      "name": "task5",
+      "tags": [
+        "work"
+      ],
+      "isCompleted": false
+    }
+  ]
+}

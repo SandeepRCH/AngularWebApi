@@ -1,0 +1,29 @@
+.block{
+	margin-top: 0.2in;
+	width: 10.5in;
+	height:5in;
+	display: inline-block;
+	background-color: darkgray;
+}
+.innerblock{
+	width: 2in;
+	height: 4in;
+	display: inline-block;
+	background-color: darksalmon;
+	margin-left: 0.5in;
+	margin-top: 0.5in;
+}
+.innerblock1{
+        margin-top: 0.5in;
+	width: 2in;
+	height: 4in;
+	display: inline-block;
+	background-color: darksalmon;
+	border: 1px solid black;
+}
+ .x{
+ height:0.5in;
+   float: top;
+   widht : 1in;
+   padding-bottom: 2.4in;
+ } 

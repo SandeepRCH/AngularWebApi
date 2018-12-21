@@ -1,0 +1,36 @@
+.FormData{
+border: 2px solid black;
+height: 1.5in;
+width: 3in;
+margin-left: 1.5in;
+}
+label{
+    margin: 5px;
+    width: 1in;
+}
+input{
+    margin: 5px;
+
+}
+button {
+    margin: 5px;
+}
+table{
+    margin-top: 10px;
+    border-collapse: collapse;
+    margin-left: 1in;
+}
+td{
+    min-width: 1in;
+    width: auto;
+}
+.Form{
+    border: 2px solid black;
+    width: 6in;
+    min-height: 5in;
+    height: auto;
+}
+.search{
+    margin: 5px;
+    margin-left: 1.5in;
+}

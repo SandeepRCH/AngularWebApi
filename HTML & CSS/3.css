@@ -1,0 +1,28 @@
+   .block{
+	   display: inline-block;
+	   width: 50%;
+	   height: 50%;
+   }
+   .innerblock{
+	   display:inline-block;
+	   background-color: aquamarine;
+	   width: 2in;
+	   border-radius: 0.1in;
+	   margin-left: 0.2in;
+	   margin-top: 0.5in;
+   }
+.box1{
+height : 100%;
+}
+.box2{
+height : 1.8in;
+}
+.box3{
+height : 2in;
+}
+.box4{
+height : 3in;
+}
+.box{
+height : 2in;
+}

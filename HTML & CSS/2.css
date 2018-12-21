@@ -1,0 +1,34 @@
+.block{
+	background-color: beige;
+	width: 100%;
+        height: 100%;
+	margin-top: 45%;
+	display: block;
+}
+.blockright{
+border-radius: 0.1in;
+background-color: #4CAF50;
+width: 4in;
+height: 1.499in;
+padding: 0.001in;
+margin-right: calc(50% - 4.2in) ;
+display: block;
+float: right;
+}
+.blockleft{
+ border-radius: 0.1in;
+background-color: cadetblue;
+width: 4in;
+height: 1.5in;
+padding: 0.01in;
+margin-left: calc(50% - 4in);
+display: block;
+float: left;
+}
+
+img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50px;
+} 
