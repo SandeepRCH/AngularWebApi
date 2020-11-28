@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ImnTgf9fMaNUAU9l01JAY5baTHkkCpimdVxLJ7oqLKh+iL5XypXIJsOhs5NVR/tK5MIDMhOq7I19OGcOdhSjYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sande\\source\\repos\\SandeepRCH\\AngularWebApi\\SchoolsSample\\SchoolsSample\\SchoolsSample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sande\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
